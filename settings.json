@@ -1,0 +1,24 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\Chiqui\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe",
+    "jupyter.interactiveWindowMode": "perFile",
+    "jupyter.askForKernelRestart": false,
+    "notebook.output.textLineLimit": 100,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "r.rpath.windows": "C:\\Program Files\\R\\R-4.1.2\\bin\\R.exe",
+    "editor.minimap.enabled": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "latex-workshop.latex.pdfWatch.delay": 10,
+    "latex-workshop.view.pdf.zoom": "page-actual",
+    // Vim settings
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true, // this fixies automatic unfold 
+    "workbench.activityBar.visible": false,
+    "window.zoomLevel": -1,
+    "workbench.statusBar.visible": false,
+    "editor.wordWrap": "on",
+    "audioCues.lineHasFoldedArea": "off",
+    "workbench.sideBar.location": "right",
+    "editor.foldingHighlight": false,
+    // Hide scrollbar
+    "editor.scrollbar.verticalScrollbarSize": 0,
+}
