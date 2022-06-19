@@ -1,0 +1,213 @@
+{
+	
+	"dollar": {
+	"prefix": "do",
+	"body": [
+		"\\$$1$"
+	],
+	"description": "dollar"
+	},
+	
+	"doubledollar": {
+	"prefix": "dd",
+	"body": [
+		"\\$$$1$$"
+	],
+	"description": "doubledollar"
+	},
+	
+	"fraction": {
+	"prefix": "fr",
+	"body": [
+		"\\frac{$1}{$2} "
+	],
+	"description": "fraction"
+	},
+
+	"sum": {
+	"prefix": "su",
+	"body": [
+		"\\displaystyle\\sum_{i=1}^N "
+	],
+	"description": "sum"
+	},
+
+	"integral": {
+	"prefix": "int",
+	"body": [
+		"\\displaystyle\\int_{$1}^{$2} "
+	],
+	"description": "int"
+	},
+	
+	"quad": {
+	"prefix": "qa",
+	"body": [
+		"\\quad "
+	],
+	"description": "quad"
+	},
+	
+	"text": {
+	"prefix": "te",
+	"body": [
+		"\\text{$1}"
+	],
+	"description": "text"
+	},
+
+	"itemize": {
+	"prefix": "it",
+	"body": [
+		"\\begin{itemize}",
+  		"\\item $1",
+		"\\end{itemize}",
+	],
+	"description": "itemize"
+	},
+	
+	"par": {
+	"prefix": "pa",
+	"body": [
+		"$1($2)"
+	],
+	"description": "round parenthesis"
+	},
+	
+	"sub": {
+	"prefix": "sb",
+	"body": [
+		"$1_{$2}"
+	],
+	"description": "subscript"
+	},
+	
+	"elevated": {
+	"prefix": "el",
+	"body": [
+		"$1^{$2}"
+	],
+	"description": "elevated"
+	},
+	
+	"hat": {
+	"prefix": "ha",
+	"body": [
+		"\\hat{$1}"
+	],
+	"description": "hat"
+	},
+	
+	"square root": {
+	"prefix": "sqrt",
+	"body": [
+		"\\sqrt{$1}"
+	],
+	"description": "square root"
+	},
+	
+	"hatbeta": {
+	"prefix": "htb",
+	"body": [
+		"\\hat{\\beta}_{$1}"
+	],
+	"description": "hat beta"
+	},
+
+	"transpose": {
+	"prefix": "tr",
+	"body": [
+		"$1^{\\text{T}}"
+	],
+	"description": "hat beta"
+	},
+
+	// Greeks
+	"beta": {
+	"prefix": "bt",
+	"body": [
+		"\\beta"
+	],
+	"description": "beta"
+	},
+
+	"alpha": {
+	"prefix": "al",
+	"body": [
+		"\\alpha"
+	],
+	"description": "alpha"
+	},
+
+	"pi": {
+	"prefix": "pi",
+	"body": [
+		"\\pi"
+	],
+	"description": "pi"
+	},
+	
+	"mu": {
+	"prefix": "mu",
+	"body": [
+		"\\mu"
+	],
+	"description": "mu"
+	},
+	
+	"sigma": {
+	"prefix": "sig",
+	"body": [
+		"\\sigma"
+	],
+	"description": "sigma"
+	},
+	
+	"Sigma": {
+	"prefix": "Sig",
+	"body": [
+		"\\Sigma"
+	],
+	"description": "Sigma"
+	},
+
+	"rho": {
+	"prefix": "rho",
+	"body": [
+		"\\rho"
+	],
+	"description": "rho"
+	},
+
+	"figure": {
+ 	"prefix": "fig",
+  	"body": [
+    "\\begin{figure}[h!]",
+    "  \\centering",
+    "  \\includegraphics[scale=0.5]{figures/$1}",
+    "  \\caption{$2}",
+    "\\end{figure}"
+  	],
+  	"description": "figure"},
+
+	"2x2 matrix": {
+    "prefix": "sxs",
+    "body": [
+    "\\begin{bmatrix} $1 & $2 \\\\\\ $3 & $4 \\end{bmatrix}"
+    ],
+    "description": "2x2 matrix"},
+
+	"matrix": {
+    "prefix": "bm",
+    "body": [
+    "\\begin{bmatrix} $1 \\end{bmatrix}"
+    ],
+    "description": "matrix"},
+
+	"code": {
+    "prefix": "code",
+    "body": [
+    "```$1```",
+    ],
+    "description": "code block"},
+}

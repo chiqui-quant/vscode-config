@@ -72,7 +72,7 @@
         "when": "!activeEditorGroupEmpty"
     },
     {
-        "key": "ctrl+k ctrl+m",
+        "key": "ctrl+i ctrl+o",
         "command": "workbench.action.editor.changeLanguageMode",
         "when": "!notebookEditorFocused"
     },
@@ -104,18 +104,6 @@
         "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated && resourceScheme == 'vscode-terminal' || terminalEditorFocus && terminalFocus && terminalProcessSupported && resourceScheme == 'vscode-terminal'"
     },
     {
-        "key": "ctrl+tab",
-        "command": "workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+pagedown",
-        "command": "-workbench.action.nextEditor"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "editor.action.insertSnippet"
-    },
-    {
         "key": "ctrl+oem_7",
         "command": "workbench.action.files.openFile",
         "when": "true"
@@ -126,7 +114,7 @@
         "when": "true"
     },
     {
-        "key": "ctrl+up",
+        "key": "ctrl+k",
         "command": "editor.fold",
         "when": "editorTextFocus && foldingEnabled"
     },
@@ -136,7 +124,7 @@
         "when": "editorTextFocus && foldingEnabled"
     },
     {
-        "key": "ctrl+down",
+        "key": "ctrl+j",
         "command": "editor.unfold",
         "when": "editorTextFocus && foldingEnabled"
     },
@@ -177,5 +165,203 @@
     "key": "j",
     "command": "cursorDown",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode == 'Normal' && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
-    }
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-extension.vim_ctrl+b",
+        "when": "editorTextFocus && vim.active && vim.use<C-b> && !inDebugRepl && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.files.action.focusFilesExplorer"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-extension.vim_ctrl+n",
+        "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.focusSideBar"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "-workbench.action.focusSideBar"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-editor.action.clipboardPasteAction"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "-extension.vim_ctrl+j",
+        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "-editor.action.deleteLines",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-extension.vim_ctrl+m",
+        "when": "editorTextFocus && vim.active && vim.use<C-m> && !inDebugRepl || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-m> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "memo.backlinksPanel.focus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "memo.openRandomNote"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "editor.action.revealDeclaration"
+    },
+    {
+        "key": "ctrl+x",
+        "command": "-editor.action.clipboardCutAction"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-extension.vim_ctrl+a",
+        "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+oem_comma",
+        "command": "editor.foldAll",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+0",
+        "command": "-editor.foldAll",
+        "when": "editorTextFocus && foldingEnabled"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+oem_comma",
+        "command": "-workbench.action.openSettings"
+    },
+    {
+        "key": "alt+enter",
+        "command": "-language-julia.executeCell",
+        "when": "editorLangId == 'juliamarkdown' || editorTextFocus && editorLangId == 'julia' && activeEditor != 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-language-julia.executeCodeBlockOrSelection",
+        "when": "editorLangId == 'juliamarkdown' || editorTextFocus && editorLangId == 'julia' && activeEditor != 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+enter",
+        "command": "-language-julia.executeCodeBlockOrSelectionAndMove",
+        "when": "editorLangId == 'juliamarkdown' || editorTextFocus && editorLangId == 'julia' && activeEditor != 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "language-julia.executeCodeBlockOrSelectionAndMove"
+    },
+    {
+        "key": "shift+enter",
+        "command": "language-julia.executeCellAndMove",
+        "when": "editorLangId == 'juliamarkdown' || editorTextFocus && editorLangId == 'julia' && activeEditor != 'workbench.editor.notebook'"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "-language-julia.executeCellAndMove",
+        "when": "editorLangId == 'juliamarkdown' || editorTextFocus && editorLangId == 'julia' && activeEditor != 'workbench.editor.notebook'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+k v",
+        "command": "-markdown.showPreviewToSide",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-markdown.showPreview",
+        "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "alt+a",
+        "command": "jupyter.openVariableView"
+    },
+    {
+        "key": "alt+a",
+        "command": "jupyterViewVariables.focus"
+    },
 ]
