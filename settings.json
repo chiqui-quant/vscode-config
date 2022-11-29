@@ -4,17 +4,16 @@
   "jupyter.askForKernelRestart": false,
   "notebook.output.textLineLimit": 200,
   "latex-workshop.view.pdf.viewer": "tab",
-  "r.rpath.windows": "C:\\Program Files\\R\\R-4.1.2\\bin\\R.exe",
+  "r.rpath.windows": "C:\\Program Files\\R\\R-4.2.2\\bin\\R.exe",
   "editor.minimap.enabled": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   // "editor.quickSuggestionsDelay": 1000,
-  "latex-workshop.latex.pdfWatch.delay": 1,
+  "latex-workshop.latex.pdfWatch.delay": 10,
   "latex-workshop.view.pdf.zoom": "page-fit",
   "explorer.autoReveal": false, // do not autofocus in the current file when using filexplorer
   
   // Hide scrollbar
   "editor.scrollbar.verticalScrollbarSize": 0,
-  "workbench.activityBar.visible": false,
   "vscode-office.openOutline": false,
   "editor.cursorSurroundingLines": 5,
   "editor.cursorBlinking": "solid",
@@ -22,37 +21,106 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.selectionHighlight": false,
   "editor.occurrencesHighlight": false,
-  "workbench.colorCustomizations": {
-  "editorCursor.foreground": "#858585", // custom cursor color
-  },
-  "workbench.colorTheme": "One Dark Pro Flat",
   "debug.disassemblyView.showSourceCode": false,
   "terminal.integrated.commandsToSkipShell": [
       "language-julia.interrupt"
   ],
   "julia.symbolCacheDownload": true,
-  "memo.backlinksPanel.collapseParentItems": true,
   "breadcrumbs.enabled": false,
-  "window.zoomLevel": -1,
   "telemetry.telemetryLevel": "off",
+  
+
+  // One dark theme customization
+  // For more info see: https://gist.github.com/dcts/5b2af4c8b6918e7d35c4121f11d49fb1
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#858585", // custom cursor color
+    "editorGroup.emptyBackground": "#0b1014",
+    
+    "[One Dark Pro Flat]":  {
+      // "editor.background": "#000000" // darker background
+      // "editor.background": "#1b1e24",
+      "editor.background": "#0b1014",
+      "sideBar.background": "#0b1014",
+      "breadcrumb.background": "#0b1014",
+      "statusBar.background": "#0b1014",
+      "titleBar.activeBackground": "#0b1014",
+      "titleBar.inactiveBackground": "#0b1014",
+      "editorGroupHeader.tabsBackground": "#0b1014",
+      "activityBar.background": "#0b1014",
+      "tab.inactiveBackground": "#0b1014",
+      "tab.activeBackground": "#0b1014",
+      "terminal.background": "#0b1014",
+      "panel.background": "#0b1014",
+      // "tab.activeBorder": "#ffd866",
+      "quickInput.background": "#0b1014",
+      "quickInput.foreground": "#fff",
+      // Interactive cell
+      // "notebook.outputContainerBackgroundColor": "#ffffff",
+    },
+
+  },
+  
+  "editor.tokenColorCustomizations": {
+    "[One Dark Pro Flat]": {
+      "variables": "#ABB2BF",
+      
+    }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[One Dark Pro Flat]": {
+      "rules": {
+        "property": "#E06C75",
+        "variable": "#ABB2BF",
+      }
+    }
+  },
   
   // Vim settings
   "vim.useSystemClipboard": true,
   "vim.foldfix": true,
-  "editor.wordWrap": "on",
   "audioCues.lineHasFoldedArea": "off",
   "editor.foldingHighlight": false,
   // Vim Keybindings
-  "vim.insertModeKeyBindings": [
-  {
-  "before": ["'"],
-  "commands": [
-  {
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "'$1'"} // autoclose quotes (also working in markdown)
-  }
+  // normal mode and visual mode tab indent
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["Tab"],
+      "after": [">",">","<Esc>"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<","<"]
+    },
+    {
+      "before": ["s"],
+      "after": ["d","d"]
+    },
+    {
+      "before": ["c","w"],
+      "after": ["c","i","w"]
+    },
   ],
-  },  
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["Tab"],
+      "after": [">",">", "<Esc>"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<","<"]
+    }
+  ],
+  
+  "vim.insertModeKeyBindings": [
+  // {
+  // "before": ["'"],
+  // "commands": [
+  // {
+  //   "command": "editor.action.insertSnippet",
+  //   "args": { "snippet": "'$1'"} // autoclose quotes (also working in markdown)
+  // }
+  // ],
+  // },  
   {
   "before": ["\""],
   "commands": [
@@ -89,16 +157,225 @@
   }
   ],
   },  
-  {
-  "before": ["<"],
-  "commands": [
-  {
-    "command": "editor.action.insertSnippet",
-    "args": { "snippet": "<$1>"} // autoclose tags
-  }
-  ],
-  },  
+  // {
+  // "before": ["<"],
+  // "commands": [
+  // {
+  //   "command": "editor.action.insertSnippet",
+  //   "args": { "snippet": "<$1>"} // autoclose tags
+  // }
+  // ],
+  // },  
   ],
   "julia.enableTelemetry": false,
   "julia.executablePath": "C:\\Users\\Chiqui\\AppData\\Local\\Programs\\Julia-1.7.3\\bin\\julia.exe",
-}
+  "latex-workshop.latex.clean.command": "",
+ {
+  "python.defaultInterpreterPath": "C:\\Users\\Chiqui\\AppData\\Local\\Microsoft\\WindowsApps\\python3.9.exe",
+  "jupyter.interactiveWindowMode": "perFile",
+  "jupyter.askForKernelRestart": false,
+  "notebook.output.textLineLimit": 200,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "r.rpath.windows": "C:\\Program Files\\R\\R-4.2.2\\bin\\R.exe",
+  "editor.minimap.enabled": false,
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // "editor.quickSuggestionsDelay": 1000,
+  "latex-workshop.latex.pdfWatch.delay": 10,
+  "latex-workshop.view.pdf.zoom": "page-fit",
+  "explorer.autoReveal": false, // do not autofocus in the current file when using filexplorer
+  
+  // Hide scrollbar
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "vscode-office.openOutline": false,
+  "editor.cursorSurroundingLines": 5,
+  "editor.cursorBlinking": "solid",
+  "workbench.startupEditor": "none",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": false,
+  "debug.disassemblyView.showSourceCode": false,
+  "terminal.integrated.commandsToSkipShell": [
+      "language-julia.interrupt"
+  ],
+  "julia.symbolCacheDownload": true,
+  "breadcrumbs.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  
+
+  // One dark theme customization
+  // For more info see: https://gist.github.com/dcts/5b2af4c8b6918e7d35c4121f11d49fb1
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#858585", // custom cursor color
+    "editorGroup.emptyBackground": "#0b1014",
+    
+    "[One Dark Pro Flat]":  {
+      // "editor.background": "#000000" // darker background
+      // "editor.background": "#1b1e24",
+      "editor.background": "#0b1014",
+      "sideBar.background": "#0b1014",
+      "breadcrumb.background": "#0b1014",
+      "statusBar.background": "#0b1014",
+      "titleBar.activeBackground": "#0b1014",
+      "titleBar.inactiveBackground": "#0b1014",
+      "editorGroupHeader.tabsBackground": "#0b1014",
+      "activityBar.background": "#0b1014",
+      "tab.inactiveBackground": "#0b1014",
+      "tab.activeBackground": "#0b1014",
+      "terminal.background": "#0b1014",
+      "panel.background": "#0b1014",
+      // "tab.activeBorder": "#ffd866",
+      "quickInput.background": "#0b1014",
+      "quickInput.foreground": "#fff",
+      // Interactive cell
+      // "notebook.outputContainerBackgroundColor": "#ffffff",
+    },
+
+  },
+  
+  "editor.tokenColorCustomizations": {
+    "[One Dark Pro Flat]": {
+      "variables": "#ABB2BF",
+      
+    }
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "[One Dark Pro Flat]": {
+      "rules": {
+        "property": "#E06C75",
+        "variable": "#ABB2BF",
+      }
+    }
+  },
+  
+  // Vim settings
+  "vim.useSystemClipboard": true,
+  "vim.foldfix": true,
+  "audioCues.lineHasFoldedArea": "off",
+  "editor.foldingHighlight": false,
+  // Vim Keybindings
+  // normal mode and visual mode tab indent
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["Tab"],
+      "after": [">",">","<Esc>"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<","<"]
+    },
+    {
+      "before": ["s"],
+      "after": ["d","d"]
+    },
+    {
+      "before": ["c","w"],
+      "after": ["c","i","w"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["Tab"],
+      "after": [">",">", "<Esc>"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<","<"]
+    }
+  ],
+  
+  "vim.insertModeKeyBindings": [
+  // {
+  // "before": ["'"],
+  // "commands": [
+  // {
+  //   "command": "editor.action.insertSnippet",
+  //   "args": { "snippet": "'$1'"} // autoclose quotes (also working in markdown)
+  // }
+  // ],
+  // },  
+  {
+  "before": ["\""],
+  "commands": [
+  {
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "\"$1\""} // autoclose quotes (also working in markdown)
+  }
+  ],
+  },
+  {
+  "before": ["("],
+  "commands": [
+  {
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "($1)"} // autoclose brackets
+  }
+  ],
+  },  
+  {
+  "before": ["["],
+  "commands": [
+  {
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "[$1]"} // autoclose brackets
+  }
+  ],
+  },  
+  {
+  "before": ["{"],
+  "commands": [
+  {
+    "command": "editor.action.insertSnippet",
+    "args": { "snippet": "{$1}"} // autoclose brackets
+  }
+  ],
+  },  
+  // {
+  // "before": ["<"],
+  // "commands": [
+  // {
+  //   "command": "editor.action.insertSnippet",
+  //   "args": { "snippet": "<$1>"} // autoclose tags
+  // }
+  // ],
+  // },  
+  ],
+  "julia.enableTelemetry": false,
+  "julia.executablePath": "C:\\Users\\Chiqui\\AppData\\Local\\Programs\\Julia-1.7.3\\bin\\julia.exe",
+  "latex-workshop.latex.clean.command": "",
+  
+  // Quick suggestions
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off"
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    }
+},
+"editor.suggest.showWords": false,
+"latex-workshop.intellisense.update.delay": 10,
+"files.autoSaveDelay": 1,
+"workbench.editor.enablePreviewFromQuickOpen": true,
+"editor.fontFamily": "\"JuliaMono\"",
+"html.autoClosingTags": false,
+"javascript.autoClosingTags": false,
+"typescript.autoClosingTags": false,
+"editor.autoClosingBrackets": "never",
+"editor.wordWrap": "on",
+"workbench.colorTheme": "One Dark Pro Flat",
+"workbench.activityBar.visible": false,
+"editor.lightbulb.enabled": false,
+"window.menuBarVisibility": "compact",
+"jupyter.themeMatplotlibPlots": true,
+"window.zoomLevel": -1,
+"markdown.preview.fontFamily": "CMU Serif, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+"markdown.styles": [
+  "Elaborate\\.obsidian\\snippets\\markdown-style.css"
+],
+"markdown.preview.fontSize": 16,
+"oneDarkPro.markdownStyle": false,
+} 
+ 
